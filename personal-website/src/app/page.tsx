@@ -16,11 +16,17 @@ export default function Page() {
             Ajay Singh
           </Link>
           <nav className="hidden md:flex gap-6">
+            <Link href="/education" className="text-sm hover:text-primary transition-colors">
+              Education
+            </Link>
             <Link href="/projects" className="text-sm hover:text-primary transition-colors">
               Projects
             </Link>
             <Link href="/contact" className="text-sm hover:text-primary transition-colors">
               Contact
+            </Link>
+            <Link href="/resume" className="text-sm hover:text-primary transition-colors">
+              Resume
             </Link>
           </nav>
           <div className="flex gap-4">
@@ -44,10 +50,10 @@ export default function Page() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Software Engineer
+              Software Engineering Student
               <br />
               <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
-                Building the future
+                Building Towards The Future
               </span>
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
@@ -124,10 +130,22 @@ export default function Page() {
                 >
                   <h3 className="text-xl font-bold">{category}</h3>
                   <div className="space-y-2">
-                    {Array.from({ length: 3 }).map((_, i) => (
+                    {category === "Frontend" && ["HTML", "CSS", "JavaScript", "React", "TypeScript"].map((skill, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="h-2 w-2 rounded-full bg-primary" />
-                        <span>Skill {i + 1}</span>
+                        <span>{skill}</span>
+                      </div>
+                    ))}
+                    {category === "Backend" && ["Node.js", "RESTApi", "PostgreSQL", "Flask", "Spring Boot"].map((skill, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div className="h-2 w-2 rounded-full bg-primary" />
+                        <span>{skill}</span>
+                      </div>
+                    ))}
+                    {category === "DevOps" && ["Docker", "Kubernetes", "Azure", "CI/CD"].map((skill, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div className="h-2 w-2 rounded-full bg-primary" />
+                        <span>{skill}</span>
                       </div>
                     ))}
                   </div>
