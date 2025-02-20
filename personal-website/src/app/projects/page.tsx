@@ -34,17 +34,20 @@ export default function Projects() {
           </Link>
 
           {/* Project 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center">
+          <Link 
+            href="http://noteai.cs.house" 
+            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
+          >
             <div className="flex justify-center text-4xl text-green-600 mb-4">
               <FaCode />
             </div>
             <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Project 2
+              NoteAI
             </h2>
             <p className="text-gray-600">
-              A brief description of your second project.
+              An intelligent note-taking app that organizes, summarizes, and enhances your notes using AI-powered insights.
             </p>
-          </div>
+          </Link>
 
           {/* Project 3 */}
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center">
