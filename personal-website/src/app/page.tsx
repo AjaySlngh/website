@@ -28,6 +28,9 @@ export default function Page() {
             <Link href="/resume" className="text-sm hover:text-primary transition-colors">
               Resume
             </Link>
+            <Link href="/about" className="text-sm hover:text-primary transition-colors">
+              About
+            </Link>
           </nav>
           <div className="flex gap-4">
             <Link href="https://github.com/AjaySlngh" target="_blank" rel="noopener noreferrer">
