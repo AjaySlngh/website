@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight Node.js image for production
-FROM node:16-alpine as production
+FROM node:18-alpine as production
 
 # Set the working directory
 WORKDIR /app
