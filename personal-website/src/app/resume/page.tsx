@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
 const Resume: React.FC = () => {
     return (
