@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
                             viewport={{ once: true }}
                             className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
                         >
-                            <Link href="/projects/bits-n-bytes">
+                            <Link href="http://bitsnbytes.cs.house">
                                 <div className="flex justify-center text-4xl text-blue-600 mb-4">
                                     <FaRobot />
                                 </div>
