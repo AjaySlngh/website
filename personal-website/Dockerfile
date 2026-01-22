@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:18-alpine as build
+FROM node:20-alpine as build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight Node.js image for production
-FROM node:18-alpine as production
+FROM node:20-alpine as production
 
 # Set the working directory
 WORKDIR /app
