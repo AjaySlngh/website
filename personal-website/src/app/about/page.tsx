@@ -54,7 +54,7 @@ const About: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center space-y-6">
             <motion.h1 className="text-4xl font-bold sm:text-5xl" variants={fadeIn}>
-              Hello, I'm Ajay Singh
+              Hey There, I'm Ajay!
             </motion.h1>
           </section>
 

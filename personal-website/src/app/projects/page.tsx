@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaCode, FaRobot, FaLaptopCode, FaGithub, FaLinkedin, FaCamera} from 'react-icons/fa';
+import { FaCode, FaRobot, FaLaptopCode, FaGithub, FaLinkedin, FaCamera, FaDice} from 'react-icons/fa';
 
 const Projects: React.FC = () => {
     return (
@@ -109,6 +109,26 @@ const Projects: React.FC = () => {
                                 </h2>
                                 <p className="text-gray-600">
                                     My very first react project, a place to store my photography.
+                                </p>
+                            </Link>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
+                        >
+                            <Link href="http://preconleague.cs.house">
+                                <div className="flex justify-center text-4xl text-red-600 mb-4">
+                                    <FaDice />
+                                </div>
+                                <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                                    Precon League
+                                </h2>
+                                <p className="text-gray-600">
+                                    A Website made with my friends to host our card game league for Magic: The Gathering.
                                 </p>
                             </Link>
                         </motion.div>
