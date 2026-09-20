@@ -23,8 +23,9 @@ const About: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center space-y-6">
             <motion.h1 className="font-mono text-4xl font-bold sm:text-5xl" variants={fadeIn}>
-              <span className="text-brand">$</span> whoami
-              <br />
+              <span className="block text-lg font-normal text-muted-foreground/60 sm:text-xl">
+                <span className="text-brand">$</span> whoami
+              </span>
               Hey There, I&apos;m Ajay!
             </motion.h1>
           </section>
