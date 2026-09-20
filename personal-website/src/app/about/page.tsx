@@ -91,7 +91,7 @@ const About: React.FC = () => {
           <motion.section className="space-y-6 text-center pb-16" variants={fadeIn}>
             <h2 className="text-2xl font-semibold">Let's Connect</h2>
             <div className="flex justify-center gap-6">
-              <Link href="mailto:your.email@example.com" className="hover:text-primary transition-colors">
+              <Link href="mailto:aos2500@g.rit.edu" className="hover:text-primary transition-colors">
                 <FaEnvelope className="h-6 w-6" />
               </Link>
               <Link
