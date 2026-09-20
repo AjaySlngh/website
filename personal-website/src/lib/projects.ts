@@ -15,7 +15,7 @@ export const projects: Project[] = [
     slug: "bits-n-bytes",
     title: "bits-n-bytes/",
     description: "An AI-powered smart cabinet for seamless, contactless shopping.",
-    href: "http://bitsnbytes.cs.house",
+    href: "https://bitsnbytes.cs.house/",
     image: "https://bitsnbytes.cs.house/assets/BnBLogo-_0Q8eAzs.svg",
   },
   {
