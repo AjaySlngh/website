@@ -26,7 +26,7 @@ export default function Page() {
               <TerminalText
                 lines={[
                   { text: "$ whoami", className: "text-muted-foreground" },
-                  { text: "> Ajay Singh - Software Engineer & Builder", className: "text-foreground font-semibold" },
+                  { text: "> Ajay Singh - Student, Software Engineer, & Builder", className: "text-foreground font-semibold" },
                   { text: "$ status", className: "text-muted-foreground" },
                   {
                     text: "> Building towards the future, one commit at a time.",
