@@ -3,58 +3,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin} from 'react-icons/fa';
+import { Download, ExternalLink } from 'lucide-react';
+import { SiteHeader } from '@/components/site-header';
+import { Button } from '@/components/ui/button';
 
 const Resume: React.FC = () => {
     return (
-        <div className="min-h-screen bg-background relative z-10">
-            <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-sm z-50">
-                <div className="container mx-auto max-w-7xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-                    <Link href="/" className="text-xl font-bold">
-                    Ajay Singh
-                </Link>
-                <nav className="hidden md:flex gap-6">
-                    <Link href="/education" className="text-sm hover:text-primary transition-colors">
-                        Education
-                    </Link>
-                    <Link href="/projects" className="text-sm hover:text-primary transition-colors">
-                        Projects
-                    </Link>
-                    <Link href="/contact" className="text-sm hover:text-primary transition-colors">
-                    Contact
-                    </Link>
-                    <Link href="/resume" className="text-sm hover:text-primary transition-colors">
-                    Resume
-                    </Link>
-                    <Link href="/about" className="text-sm hover:text-primary transition-colors">
-                    About
-                    </Link>
-                </nav>
-                <div className="flex gap-4">
-                    <Link href="https://github.com/AjaySlngh" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="h-5 w-5" />
-                    </Link>
-                    <Link href="https://linkedin.com/in/ajay-singh-449265286" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="h-5 w-5" />
-                    </Link>
-                </div>
-                </div>
-            </header>
+        <div className="min-h-screen relative z-10">
+            <SiteHeader />
             <main className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32">
                 <section className="py-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="max-w-3xl mx-auto text-center"
-                    ></motion.div>
-                    <div className="mt-10">
-                        <embed
+                        className="max-w-3xl mx-auto flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center"
+                    >
+                        <Button asChild className="bg-brand text-brand-foreground hover:bg-brand/90">
+                            <Link href="/AjaySinghResume.pdf" download>
+                                <Download className="mr-2 h-4 w-4" />
+                                Download Resume
+                            </Link>
+                        </Button>
+                        <Button variant="outline" asChild className="border-brand/40 hover:border-brand hover:text-brand">
+                            <Link href="/AjaySinghResume.pdf" target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="mr-2 h-4 w-4" />
+                                Open in New Tab
+                            </Link>
+                        </Button>
+                    </motion.div>
+                    <div className="mt-10 max-w-4xl mx-auto overflow-hidden rounded-lg border bg-card/60">
+                        <div className="flex items-center gap-2 border-b bg-muted/40 px-4 py-2">
+                            <span className="h-3 w-3 rounded-full bg-destructive/70" />
+                            <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
+                            <span className="h-3 w-3 rounded-full bg-brand/70" />
+                            <span className="ml-2 font-mono text-xs text-muted-foreground">~/resume.pdf</span>
+                        </div>
+                        <iframe
                             src="/AjaySinghResume.pdf"
-                            type="application/pdf"
-                            width="100%"
-                            height="800px"
+                            title="Ajay Singh Resume"
+                            className="h-[70vh] w-full sm:h-[85vh]"
                         />
+                        <p className="border-t px-4 py-3 text-center text-xs text-muted-foreground">
+                            Having trouble viewing the PDF? Use the buttons above to download it or open it in a new tab.
+                        </p>
                     </div>
                 </section>
             </main>

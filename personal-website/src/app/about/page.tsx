@@ -4,7 +4,7 @@ import type React from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
-import { Card } from "@/components/ui/card"
+import { SiteHeader } from "@/components/site-header"
 
 const About: React.FC = () => {
   const fadeIn = {
@@ -16,63 +16,43 @@ const About: React.FC = () => {
   const skills = ["React/Next.js", "TypeScript", "Node.js", "Python", "SQL", "Java", "C/C++", "Docker"]
 
   return (
-    <div className="min-h-screen bg-background relative z-10">
-      <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-sm z-50">
-        <div className="container mx-auto max-w-7xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="text-xl font-bold">
-            Ajay Singh
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/education" className="text-sm hover:text-primary transition-colors">
-              Education
-            </Link>
-            <Link href="/projects" className="text-sm hover:text-primary transition-colors">
-              Projects
-            </Link>
-            <Link href="/contact" className="text-sm hover:text-primary transition-colors">
-              Contact
-            </Link>
-            <Link href="/resume" className="text-sm hover:text-primary transition-colors">
-              Resume
-            </Link>
-            <Link href="/about" className="text-sm hover:text-primary transition-colors">
-              About
-            </Link>
-          </nav>
-          <div className="flex gap-4">
-            <Link href="https://github.com/AjaySlngh" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="h-5 w-5" />
-            </Link>
-            <Link href="https://linkedin.com/in/ajay-singh-449265286" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen relative z-10">
+      <SiteHeader />
       <main className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 relative z-20">
         <motion.div initial="initial" animate="animate" variants={fadeIn} className="space-y-16">
           {/* Hero Section */}
           <section className="text-center space-y-6">
-            <motion.h1 className="text-4xl font-bold sm:text-5xl" variants={fadeIn}>
-              Hey There, I'm Ajay!
+            <motion.h1 className="font-mono text-4xl font-bold sm:text-5xl" variants={fadeIn}>
+              <span className="text-brand">$</span> whoami
+              <br />
+              Hey There, I&apos;m Ajay!
             </motion.h1>
           </section>
 
           {/* Skills Section */}
           <motion.section className="space-y-6" variants={fadeIn}>
-            <h2 className="text-2xl font-semibold text-center">Technical Skills</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {skills.map((skill, index) => (
-                <Card key={skill} className="p-4 text-center hover:border-primary transition-colors">
-                  {skill}
-                </Card>
-              ))}
+            <h2 className="font-mono text-2xl font-semibold text-center">
+              <span className="text-brand">{"//"}</span> Technical Skills
+            </h2>
+            <div className="mx-auto max-w-3xl rounded-lg border bg-card p-6 font-mono text-sm sm:text-base">
+              <div className="text-muted-foreground">const skills = [</div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1 pl-6 sm:grid-cols-3">
+                {skills.map((skill) => (
+                  <div key={skill}>
+                    <span className="text-foreground">&quot;{skill}&quot;</span>
+                    <span className="text-muted-foreground">,</span>
+                  </div>
+                ))}
+              </div>
+              <div className="text-muted-foreground">]</div>
             </div>
           </motion.section>
 
           {/* About Me Section */}
           <motion.section className="space-y-6 max-w-3xl mx-auto" variants={fadeIn}>
-            <h2 className="text-2xl font-semibold text-center">About Me</h2>
+            <h2 className="font-mono text-2xl font-semibold text-center">
+              <span className="text-brand">{"//"}</span> About Me
+            </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
                 I'm a software engineer with a strong foundation in full-stack development. My journey in technology
@@ -89,16 +69,18 @@ const About: React.FC = () => {
 
           {/* Contact Section */}
           <motion.section className="space-y-6 text-center pb-16" variants={fadeIn}>
-            <h2 className="text-2xl font-semibold">Let's Connect</h2>
+            <h2 className="font-mono text-2xl font-semibold">
+              <span className="text-brand">{"//"}</span> Let&apos;s Connect
+            </h2>
             <div className="flex justify-center gap-6">
-              <Link href="mailto:aos2500@g.rit.edu" className="hover:text-primary transition-colors">
+              <Link href="mailto:aos2500@g.rit.edu" className="transition-colors hover:text-brand">
                 <FaEnvelope className="h-6 w-6" />
               </Link>
               <Link
                 href="https://github.com/AjaySlngh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-brand"
               >
                 <FaGithub className="h-6 w-6" />
               </Link>
@@ -106,7 +88,7 @@ const About: React.FC = () => {
                 href="https://linkedin.com/in/ajay-singh-449265286"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-brand"
               >
                 <FaLinkedin className="h-6 w-6" />
               </Link>
