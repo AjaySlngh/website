@@ -19,11 +19,11 @@ export const projects: Project[] = [
     image: "https://bitsnbytes.cs.house/assets/BnBLogo-_0Q8eAzs.svg",
   },
   {
-    slug: "noteai",
-    title: "noteai/",
-    description: "An intelligent note-taking app that organizes, summarizes, and enhances your notes using AI-powered insights.",
-    href: "http://noteai.cs.house",
-    icon: FaCode,
+    slug: "sift",
+    title: "sift/",
+    description: "Document intake & decisioning using AI",
+    href: "https://sift.cs.house",
+    icon: FaFileAlt,
   },
   {
     slug: "flicks",
@@ -40,10 +40,10 @@ export const projects: Project[] = [
     icon: FaDice,
   },
   {
-    slug: "sift",
-    title: "sift/",
-    description: "Document intake & decisioning using AI",
-    href: "https://sift.cs.house",
-    icon: FaFileAlt,
+    slug: "noteai",
+    title: "noteai/",
+    description: "An intelligent note-taking app that organizes, summarizes, and enhances your notes using AI-powered insights.",
+    href: "http://noteai.cs.house",
+    icon: FaCode,
   },
 ]
