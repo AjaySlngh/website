@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons"
-import { FaCode, FaCamera, FaDice } from "react-icons/fa"
+import { FaCode, FaCamera, FaDice, FaFileAlt } from "react-icons/fa"
 
 export interface Project {
   slug: string
@@ -38,5 +38,12 @@ export const projects: Project[] = [
     description: "A website made with my friends to host our card game league for Magic: The Gathering.",
     href: "http://preconleague.cs.house",
     icon: FaDice,
+  },
+  {
+    slug: "sift",
+    title: "sift/",
+    description: "Document intake & decisioning using AI",
+    href: "https://sift.cs.house",
+    icon: FaFileAlt,
   },
 ]
